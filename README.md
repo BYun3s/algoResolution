@@ -9,7 +9,7 @@ Ce script Python permet de saisir des expressions logiques et de vérifier si el
 ## Prérequis
 
 Assurez-vous d`avoir ``Python 3.11``</br>
-Ce script utilise la bibliothèque ``sympy``. Pour l'installer, vous pouvez exécuter cette commande dans votre terminal ``pip install sympy``    
+Ce script utilise la bibliothèque <code>sympy</code>. Pour l'installer, vous pouvez exécuter cette commande dans votre terminal  <code>pip install sympy</code>    
 
 
 ## Utilisation
