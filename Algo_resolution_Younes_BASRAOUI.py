@@ -5,17 +5,16 @@ Created on Thu Feb 15 11:01:54 2024
 @author: Younes BASRAOUI
 """
 from sympy.logic.boolalg import to_cnf, to_dnf
-import sys
 
 # exp = B & (A | C)  --- non valid
 # exp = ~((~P | ~Z | R) & (~R) & P & (~T | Z) & T) ---valid
 
 def main():
     while True:
-        exp = input("Entrer une expression logique (ou 'exit' pour quitter) : ")
+        exp = input("Entrer une expression logique (Tapez '0' pour quitter) : ")
         
-        if exp.lower() == 'exit':
-            print("Fin du programme.")
+        if exp == '0':
+            print("\nFin du programme\n")
             break
         
         not_exp = '~(' + exp + ')'
@@ -48,7 +47,7 @@ def main():
                         c1.remove(literal_c1)
                         c2.remove(literal_c2)
                         if len(c1) == 0 and len(c2) == 0:
-                            print("La Formule est valide")
+                            print("\nLa Formule est valide\n")
                             return
 
             for j in range(len(c1)):
@@ -66,8 +65,7 @@ def main():
 
         clauses.extend(clauses_resolvants)
 
-        print("La Formule n\'est pas valide")
+        print("\nLa Formule n\'est pas valide\n")
 
 if __name__ == "__main__":
-    while True:
         main()
